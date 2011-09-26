@@ -1510,7 +1510,7 @@
         into a bhkRigidBodyT and vice-versa.
         <add name="Unknown 5 Floats" type="float" arr1="5">Unknown.</add>
         <add name="Unknown 4 Shorts" type="ushort" arr1="4">Unknown.</add>
-        <add name="Layer Copy" type="OblivionLayer" default="1">Copy of Layer value?</add>
+        <add name="Layer Copy" type="OblivionLayer" default="OL_STATIC">Copy of Layer value?</add>
         <add name="Col Filter Copy" type="byte" default="0">Copy of Col Filter value?</add>
         <add name="Unknown 7 Shorts" type="ushort" arr1="7" default="0 21280 2481 62977 65535 44 0">Unknown.</add>
         <add name="Translation" type="Vector4"> A vector that moves the body by the specified amount. Only enabled in bhkRigidBodyT objects.</add>
@@ -1535,10 +1535,10 @@
             This is a hint to the engine to see how much CPU the engine should invest to keep this object from penetrating.
             A good choice is 5% - 20% of the smallest diameter of the object.
         </add>
-        <add name="Motion System" type="MotionSystem" default="1">Motion system? Overrides Quality when on Keyframed?</add>
+        <add name="Motion System" type="MotionSystem" default="MO_SYS_DYNAMIC">Motion system? Overrides Quality when on Keyframed?</add>
         <add name="Unknown Byte 1" type="byte" default="1"> Usually set to 1 for fixed objects, or set to 2 for moving ones.  Seems to always be same as Unknown Byte 2.</add>
         <add name="Unknown Byte 2" type="byte" default="1">Usually set to 1 for fixed objects, or set to 2 for moving ones.  Seems to always be same as Unknown Byte 1.</add>
-        <add name="Quality Type" type="MotionQuality" default="1">The motion type. Determines quality of motion?</add>
+        <add name="Quality Type" type="MotionQuality" default="MO_QUAL_FIXED">The motion type. Determines quality of motion?</add>
         <add name="Unknown Int 6" type="uint" default="512">Unknown.</add>
         <add name="Unknown Int 7" type="uint" default="160">Unknown.</add>
         <add name="Unknown Int 8" type="uint" default="161">Unknown.</add>
