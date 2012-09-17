@@ -5706,5 +5706,94 @@
         <add name="Unknown Short 4" type="ushort">Unknown, flag?</add>  
     </niobject>
     
+    <!-- zootycoon 2 .BF specific blocks -->
+
+    <basic name="LineStringBF" count="0" niflibtype="LineString" nifskopetype="linestring">
+        A variable length string that ends with a newline character (0x00).
+    </basic>
+	
+    <niobject name="BFHeader" abstract="0">
+        First Block of the Bf file
+        <add name="unknown int" type="uint" default="2">unknown</add>
+					<add name="Animation length" type="float">unknown</add>
+		        <add name="number of blocks" type="uint">unknown</add>
+    </niobject>
+	
+    <niobject name="BFNodeParent" abstract="0">
+        
+        <add name="Name" type="SizedString">Parent Node Name 32 char limit</add>
+		<add name="bone priority" type="ushort" default="3">3 for Bip01, 2 for all others</add>
+				<add name="unknown" type="byte" default="204"></add>
+				<add name="unknown" type="byte" default="204"></add>
+				<add name="num of bytes" type="ushort"></add>
+				<add name="unknown" type="uint"></add>
+				<add name="unknown" type="byte" default="204"></add>
+				<add name="unknown" type="byte" default="204"></add>
+				<add name="unknown2" type="ushort" default="14">unknown</add>
+    </niobject>
+	
+    <niobject name="BFNodeParentTEST" abstract="0">
+        
+        <add name="Name" type="LineStringBF">Parent Node Name 32 char limit</add>
+		<add name="bone priority" type="ushort" default="3">3 for Bip01, 2 for all others</add>
+				<add name="unknown" type="byte" default="204"></add>
+				<add name="unknown" type="byte" default="204"></add>
+				<add name="num of bytes" type="ushort"></add>
+				<add name="unknown" type="uint"></add>
+				<add name="unknown" type="byte" default="204"></add>
+				<add name="unknown" type="byte" default="204"></add>
+				<add name="unknown2" type="ushort" default="14">unknown</add>
+    </niobject>
+
+
+	    <niobject name="BFTextKeyExtraData" abstract="0">
+        Extra data, used to tell the length of an animation
+        <add name="BF keys start" type="float">Start of animations Value</add>
+		        <add name="unknown2" type="ushort" default="6">unknown</add>
+        <add name="Start first 4 letters" type="uint" default="1918989427">The Animation Start</add>
+	    <add name="Start last 2" type="ushort" default="116">The Animation Start</add>
+        <add name="BF Keys end" type="float">End of animations Value</add>
+		        <add name="unknown3" type="ushort" default="5">unknown</add>
+        <add name="End int format" type="uint" default="543452773">The Animation End</add>
+    </niobject>
+	
+	    <niobject name="BFQuaternionController" abstract="0">
+        Keyframes for mesh animation.
+	                    <add name="Num Quats" type="ushort"></add>
+						<add name="unknown" type="ushort">influences the num quats set value to add 8 to numb quats 1 becomes 18 ect</add>
+						<add name="unknown" type="ushort">unknown</add>
+    </niobject>
+	
+	<niobject name="BFQuaternionBlock" abstract="0">
+        Keyframes for mesh animation.
+				        <add name="Time" type="ushort"></add>
+						<add name="x" type="ushort"></add>
+						<add name="y" type="ushort"></add>
+						<add name="z" type="ushort"></add>
+						<add name="w" type="ushort"></add>
+    </niobject>
+		    <niobject name="BFTransformController" abstract="0">
+        Keyframes for mesh animation.
+		<add name="unknown" type="ushort" default="2">unknown</add>
+	                    <add name="Num Transforms" type="ushort"></add>
+						<add name="unknown" type="ushort">related to num transforms</add>
+						<add name="unknown" type="ushort">unknown</add>
+    </niobject>
+		<niobject name="BFTransformBlock" abstract="0">
+        Keyframes for mesh animation.
+				        <add name="Time" type="ushort"></add>
+						<add name="x" type="ushort"></add>
+						<add name="y" type="ushort"></add>
+						<add name="z" type="ushort"></add>
+    </niobject>
+	
+			    <niobject name="BFScaleController" abstract="0">
+        Keyframes for mesh animation.
+		<add name="unknown" type="ushort" default="17">unknown</add>
+	                    <add name="Num scales" type="ushort" default="1"></add>
+						<add name="unknown" type="ushort" default="11">related to num scales</add>
+						<add name="unknown" type="uint">unknown</add>
+												<add name="unknown" type="byte" default="50">unknown</add>
+    </niobject>
     
 </niftoolsxml>
