@@ -1616,8 +1616,8 @@
         <add name="Indices" type="ushort" arr1="Num Indices"></add>
         <add name="Num Strips" type="uint">Number of compressed strips</add>
         <add name="Strips" type="ushort" arr1="Num Strips">Compressed strips</add>
-        <add name="Num Indices 2" type="uint">Number of </add>
-        <add name="Indices 2" type="ushort" arr1="Num Indices 2">Compressed </add>
+        <add name="Num Indices 2" type="uint">Number of Indices2</add>
+        <add name="Indices 2" type="ushort" arr1="Num Indices 2">Compressed signed angles between two faces normals (stored as EdgeBitCode)</add>
     </compound>
 
 <!-- nowhere used currently
